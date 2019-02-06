@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace IA
 {
-    public partial class Mapas : Form
+    public partial class Casas : Form
     {
-        public Mapas()
+        public Casas()
         {
             InitializeComponent();
         }
