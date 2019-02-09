@@ -32,28 +32,34 @@ namespace IA
         {
             try
             {
+                // Graficar y dibujar los recuadros.
                 Graphics grafico = panelMapa.CreateGraphics();
                 Pen lapiz = new Pen(Color.Black, 2);
+
+                // Tamaño del mapa.
                 int tam = Convert.ToInt32(this.cboTam.Text);
                 float x = 0f;
                 float y = 0f;
                 float xLado = ((panelMapa.Width - lapiz.Width) * 1.0f / tam);
                 float yLado = ((panelMapa.Height - lapiz.Width) * 1.0f / tam);
-                // Vertical
+                               
+                // Vertical.
                 for (int i = 0; i < tam + 1; i++)
                 {
-                    grafico.DrawLine(lapiz, x, y, x, yLado * tam); // panelMapa.Height
+                    grafico.DrawLine(lapiz, x, y, x, yLado * tam);
                     x += xLado;
                 }
-                // Horizontal
+
+                // Horizontal.
                 x = 0f;
                 for (int i = 0; i < tam + 1; i++)
                 {
                     grafico.DrawLine(lapiz, x, y, xLado * tam, y);
                     y += yLado;
                 }
+
+                // Salida de tamaño del panel.
                 this.lblX.Text = tam + " x " + tam;
-                
             }
             catch // (Exception ex)
             {
@@ -85,18 +91,14 @@ namespace IA
 
         // Parte de "Opciones del Sistema".
 
-        private void pbMapa_Click(object sender, EventArgs e)
+        private void pbMapa_Click(object sender, EventArgs e) // Cambiar de casa a pokemon.
         {
-            Casas pantallaMapas = new Casas();
-            pantallaMapas.ShowDialog();
-            this.Show();
+
         }
 
         private void pbAvatar_Click(object sender, EventArgs e)
         {
-            Avatar pantallaAvatar = new Avatar();
-            pantallaAvatar.ShowDialog();
-            this.Show();
+
         }
 
         // Parte de "Opciones Generales".

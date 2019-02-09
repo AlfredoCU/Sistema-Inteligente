@@ -32,14 +32,14 @@
             this.gbMapa = new System.Windows.Forms.GroupBox();
             this.panelMapa = new System.Windows.Forms.Panel();
             this.gbControles = new System.Windows.Forms.GroupBox();
-            this.lblX = new System.Windows.Forms.Label();
-            this.lblTam = new System.Windows.Forms.Label();
-            this.cboTam = new System.Windows.Forms.ComboBox();
             this.btnIniciar = new System.Windows.Forms.Button();
             this.lblObstaculos = new System.Windows.Forms.Label();
             this.btnReiniciar = new System.Windows.Forms.Button();
-            this.btnCargarMapa = new System.Windows.Forms.Button();
             this.tbObstaculos = new System.Windows.Forms.TrackBar();
+            this.lblX = new System.Windows.Forms.Label();
+            this.lblTam = new System.Windows.Forms.Label();
+            this.cboTam = new System.Windows.Forms.ComboBox();
+            this.btnCargarMapa = new System.Windows.Forms.Button();
             this.gbOpcSistema = new System.Windows.Forms.GroupBox();
             this.pbAvatars = new System.Windows.Forms.PictureBox();
             this.pbCasas = new System.Windows.Forms.PictureBox();
@@ -93,36 +93,6 @@
             this.gbControles.TabStop = false;
             this.gbControles.Text = "Controles";
             // 
-            // lblX
-            // 
-            this.lblX.AutoSize = true;
-            this.lblX.Location = new System.Drawing.Point(454, 42);
-            this.lblX.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblX.Name = "lblX";
-            this.lblX.Size = new System.Drawing.Size(38, 17);
-            this.lblX.TabIndex = 8;
-            this.lblX.Text = "? x ?";
-            // 
-            // lblTam
-            // 
-            this.lblTam.AutoSize = true;
-            this.lblTam.Location = new System.Drawing.Point(243, 42);
-            this.lblTam.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblTam.Name = "lblTam";
-            this.lblTam.Size = new System.Drawing.Size(133, 17);
-            this.lblTam.TabIndex = 7;
-            this.lblTam.Text = "Tamaño del mapa:";
-            // 
-            // cboTam
-            // 
-            this.cboTam.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboTam.FormattingEnabled = true;
-            this.cboTam.Location = new System.Drawing.Point(381, 39);
-            this.cboTam.Name = "cboTam";
-            this.cboTam.Size = new System.Drawing.Size(68, 25);
-            this.cboTam.TabIndex = 6;
-            this.cboTam.SelectedIndexChanged += new System.EventHandler(this.cboTam_SelectedIndexChanged);
-            // 
             // btnIniciar
             // 
             this.btnIniciar.Image = ((System.Drawing.Image)(resources.GetObject("btnIniciar.Image")));
@@ -159,6 +129,46 @@
             this.btnReiniciar.UseVisualStyleBackColor = true;
             this.btnReiniciar.Click += new System.EventHandler(this.btnReiniciar_Click);
             // 
+            // tbObstaculos
+            // 
+            this.tbObstaculos.Location = new System.Drawing.Point(19, 43);
+            this.tbObstaculos.Margin = new System.Windows.Forms.Padding(2);
+            this.tbObstaculos.Maximum = 80;
+            this.tbObstaculos.Name = "tbObstaculos";
+            this.tbObstaculos.Size = new System.Drawing.Size(502, 45);
+            this.tbObstaculos.TabIndex = 0;
+            this.tbObstaculos.Scroll += new System.EventHandler(this.tbObstaculos_Scroll);
+            // 
+            // lblX
+            // 
+            this.lblX.AutoSize = true;
+            this.lblX.Location = new System.Drawing.Point(454, 42);
+            this.lblX.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblX.Name = "lblX";
+            this.lblX.Size = new System.Drawing.Size(38, 17);
+            this.lblX.TabIndex = 8;
+            this.lblX.Text = "? x ?";
+            // 
+            // lblTam
+            // 
+            this.lblTam.AutoSize = true;
+            this.lblTam.Location = new System.Drawing.Point(243, 42);
+            this.lblTam.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTam.Name = "lblTam";
+            this.lblTam.Size = new System.Drawing.Size(133, 17);
+            this.lblTam.TabIndex = 7;
+            this.lblTam.Text = "Tamaño del mapa:";
+            // 
+            // cboTam
+            // 
+            this.cboTam.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboTam.FormattingEnabled = true;
+            this.cboTam.Location = new System.Drawing.Point(381, 39);
+            this.cboTam.Name = "cboTam";
+            this.cboTam.Size = new System.Drawing.Size(68, 25);
+            this.cboTam.TabIndex = 6;
+            this.cboTam.SelectedIndexChanged += new System.EventHandler(this.cboTam_SelectedIndexChanged);
+            // 
             // btnCargarMapa
             // 
             this.btnCargarMapa.Image = ((System.Drawing.Image)(resources.GetObject("btnCargarMapa.Image")));
@@ -171,16 +181,6 @@
             this.btnCargarMapa.Text = "Cargar Mapa";
             this.btnCargarMapa.UseVisualStyleBackColor = true;
             this.btnCargarMapa.Click += new System.EventHandler(this.btnCargarMapa_Click);
-            // 
-            // tbObstaculos
-            // 
-            this.tbObstaculos.Location = new System.Drawing.Point(19, 43);
-            this.tbObstaculos.Margin = new System.Windows.Forms.Padding(2);
-            this.tbObstaculos.Maximum = 80;
-            this.tbObstaculos.Name = "tbObstaculos";
-            this.tbObstaculos.Size = new System.Drawing.Size(502, 45);
-            this.tbObstaculos.TabIndex = 0;
-            this.tbObstaculos.Scroll += new System.EventHandler(this.tbObstaculos_Scroll);
             // 
             // gbOpcSistema
             // 
@@ -345,6 +345,7 @@
         private System.Windows.Forms.Label lblX;
         private System.Windows.Forms.Label lblTam;
         private System.Windows.Forms.GroupBox gbAjustesMapa;
+        private System.Windows.Forms.PictureBox img;
     }
 }
 
