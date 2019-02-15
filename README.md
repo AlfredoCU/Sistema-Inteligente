@@ -1,3 +1,3 @@
 # Sistema Inteligente.
 
-Programación de Algoritmo de Bresenham en "El mundo de Kibus".
+- Programación de Algoritmo de Bresenham en "El mundo de Kibus".
