@@ -12,9 +12,14 @@ namespace IA
 {
     public partial class IA : Form
     {
+        Graphics grafico;
+        Pen lapiz = new Pen(Color.Black, 2);
+        Image obsImg = Image.FromFile("Personajes/ash.png");
+
         public IA()
         {
             InitializeComponent();
+            grafico = panelMapa.CreateGraphics();
         }
 
         // Parte de "Ajustes del Mapa".
@@ -32,24 +37,18 @@ namespace IA
         {
             try
             {
-                // Graficar y dibujar los recuadros.
-                Graphics grafico = panelMapa.CreateGraphics();
-                Pen lapiz = new Pen(Color.Black, 2);
-
                 // Tamaño del mapa.
                 int tam = Convert.ToInt32(this.cboTam.Text);
                 float x = 0f;
                 float y = 0f;
                 float xLado = ((panelMapa.Width - lapiz.Width) * 1.0f / tam);
-                float yLado = ((panelMapa.Height - lapiz.Width) * 1.0f / tam);
-                               
+                float yLado = ((panelMapa.Height - lapiz.Width) * 1.0f / tam);      
                 // Vertical.
                 for (int i = 0; i < tam + 1; i++)
                 {
                     grafico.DrawLine(lapiz, x, y, x, yLado * tam);
                     x += xLado;
                 }
-
                 // Horizontal.
                 x = 0f;
                 for (int i = 0; i < tam + 1; i++)
@@ -57,11 +56,10 @@ namespace IA
                     grafico.DrawLine(lapiz, x, y, xLado * tam, y);
                     y += yLado;
                 }
-
                 // Salida de tamaño del panel.
                 this.lblX.Text = tam + " x " + tam;
             }
-            catch // (Exception ex)
+            catch
             {
                 MessageBox.Show("Error al no ingresar el tamaño del mapa.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -91,12 +89,12 @@ namespace IA
 
         // Parte de "Opciones del Sistema".
 
-        private void pbMapa_Click(object sender, EventArgs e) // Cambiar de casa a pokemon.
+        private void pbAvatar_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void pbAvatar_Click(object sender, EventArgs e)
+        private void pbPokemon_Click(object sender, EventArgs e)
         {
 
         }
@@ -108,6 +106,7 @@ namespace IA
             if (chkModoNocturno.Checked)
             {
                 this.BackColor = Color.DimGray;
+                this.gbAjustesMapa.ForeColor = Color.White;
                 this.gbMapa.ForeColor = Color.White;
                 this.gbControles.ForeColor = Color.White;
                 this.gbOpcSistema.ForeColor = Color.White;
@@ -121,6 +120,7 @@ namespace IA
             else
             {
                 this.BackColor = Color.White;
+                this.gbAjustesMapa.ForeColor = Color.Black;
                 this.gbMapa.ForeColor = Color.Black;
                 this.gbControles.ForeColor = Color.Black;
                 this.gbOpcSistema.ForeColor = Color.Black;

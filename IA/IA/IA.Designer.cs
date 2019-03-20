@@ -42,7 +42,7 @@
             this.btnCargarMapa = new System.Windows.Forms.Button();
             this.gbOpcSistema = new System.Windows.Forms.GroupBox();
             this.pbAvatars = new System.Windows.Forms.PictureBox();
-            this.pbCasas = new System.Windows.Forms.PictureBox();
+            this.pbPokemon = new System.Windows.Forms.PictureBox();
             this.gbOpcGenerales = new System.Windows.Forms.GroupBox();
             this.btnInfo = new System.Windows.Forms.Button();
             this.chkModoNocturno = new System.Windows.Forms.CheckBox();
@@ -53,7 +53,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbObstaculos)).BeginInit();
             this.gbOpcSistema.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatars)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCasas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPokemon)).BeginInit();
             this.gbOpcGenerales.SuspendLayout();
             this.gbAjustesMapa.SuspendLayout();
             this.SuspendLayout();
@@ -185,7 +185,7 @@
             // gbOpcSistema
             // 
             this.gbOpcSistema.Controls.Add(this.pbAvatars);
-            this.gbOpcSistema.Controls.Add(this.pbCasas);
+            this.gbOpcSistema.Controls.Add(this.pbPokemon);
             this.gbOpcSistema.Location = new System.Drawing.Point(614, 289);
             this.gbOpcSistema.Margin = new System.Windows.Forms.Padding(2);
             this.gbOpcSistema.Name = "gbOpcSistema";
@@ -199,7 +199,7 @@
             // 
             this.pbAvatars.AccessibleDescription = "Elegir Avatar";
             this.pbAvatars.Image = ((System.Drawing.Image)(resources.GetObject("pbAvatars.Image")));
-            this.pbAvatars.Location = new System.Drawing.Point(293, 23);
+            this.pbAvatars.Location = new System.Drawing.Point(131, 20);
             this.pbAvatars.Margin = new System.Windows.Forms.Padding(2);
             this.pbAvatars.Name = "pbAvatars";
             this.pbAvatars.Size = new System.Drawing.Size(119, 119);
@@ -208,18 +208,18 @@
             this.pbAvatars.TabStop = false;
             this.pbAvatars.Click += new System.EventHandler(this.pbAvatar_Click);
             // 
-            // pbCasas
+            // pbPokemon
             // 
-            this.pbCasas.AccessibleDescription = "Elegir Casas";
-            this.pbCasas.Image = ((System.Drawing.Image)(resources.GetObject("pbCasas.Image")));
-            this.pbCasas.Location = new System.Drawing.Point(131, 23);
-            this.pbCasas.Margin = new System.Windows.Forms.Padding(2);
-            this.pbCasas.Name = "pbCasas";
-            this.pbCasas.Size = new System.Drawing.Size(119, 119);
-            this.pbCasas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbCasas.TabIndex = 0;
-            this.pbCasas.TabStop = false;
-            this.pbCasas.Click += new System.EventHandler(this.pbMapa_Click);
+            this.pbPokemon.AccessibleDescription = "Elegir Casas";
+            this.pbPokemon.Image = ((System.Drawing.Image)(resources.GetObject("pbPokemon.Image")));
+            this.pbPokemon.Location = new System.Drawing.Point(293, 20);
+            this.pbPokemon.Margin = new System.Windows.Forms.Padding(2);
+            this.pbPokemon.Name = "pbPokemon";
+            this.pbPokemon.Size = new System.Drawing.Size(119, 119);
+            this.pbPokemon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbPokemon.TabIndex = 0;
+            this.pbPokemon.TabStop = false;
+            this.pbPokemon.Click += new System.EventHandler(this.pbPokemon_Click);
             // 
             // gbOpcGenerales
             // 
@@ -315,7 +315,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbObstaculos)).EndInit();
             this.gbOpcSistema.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatars)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCasas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPokemon)).EndInit();
             this.gbOpcGenerales.ResumeLayout(false);
             this.gbOpcGenerales.PerformLayout();
             this.gbAjustesMapa.ResumeLayout(false);
@@ -330,7 +330,7 @@
         private System.Windows.Forms.GroupBox gbControles;
         private System.Windows.Forms.GroupBox gbOpcSistema;
         private System.Windows.Forms.PictureBox pbAvatars;
-        private System.Windows.Forms.PictureBox pbCasas;
+        private System.Windows.Forms.PictureBox pbPokemon;
         private System.Windows.Forms.GroupBox gbOpcGenerales;
         private System.Windows.Forms.Button btnInfo;
         private System.Windows.Forms.CheckBox chkModoNocturno;
