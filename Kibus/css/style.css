@@ -1,0 +1,128 @@
+/* Diseño en cuerpo en general */
+body {
+	background-color: #333333;
+	font-family: 'Roboto', Arial, Helvetica, "Trebuchet MS", sans-serif;
+}
+
+/* Contenedores */
+canvas {
+	background-color: #FCFCFC;
+	border-radius: 1px;
+	width: 800px;
+	height: 608px;
+	float: left;
+	margin-left: 5%;
+	margin-bottom: 7%;
+}
+
+#cont {
+	width: 30%;
+	margin-right: 5%;
+	float: right;
+}
+
+.contmenu {
+	display: inline-block;
+}
+
+/* Labels del ménu */
+.text label {
+	font-size: 18px;
+	margin-top: 1%;
+	margin-bottom: 1%;
+	color: white;
+}
+
+/* Botones */
+.btn-group img {
+	height: 50px;
+}
+
+.t {
+	font-size: 14px;
+	font-family: 'Roboto', Arial;
+}
+
+/* BANNER */
+#banner {
+  position: relative;
+}
+
+#banner img {
+  width: 100%;
+  height: 100%;
+}
+
+#banner .contenedor {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  color: #FFF;
+}
+
+#banner h2 {
+  font-size: 28px;
+	font-weight: bold;
+	text-align: center;
+}
+
+#banner p {
+	font-weight: bold;
+	font-size: 21px;
+  color: #FFFFFF;
+	text-align: center;
+}
+
+@media (min-width: 480px) {
+  #banner h2 {
+    font-size: 40px;
+  }
+  #banner p {
+      margin-top: 25px;
+  }
+}
+
+@media (min-width: 768px) {
+  #banner {
+    height: 300px;
+    overflow: hidden;
+  }
+  #banner img {
+    height: auto;
+    margin-top: -100px;
+  }
+}
+
+@media (min-width: 1024px) {
+  #banner img {
+    margin-top: -200px;
+  }
+}
+
+/* FOOTER */
+footer .contenedor {
+	width: 100%;
+	background-color: #F4891A;
+	color: #FFFFFF;
+  display: flex;
+	padding-top: 10px;
+  padding-bottom: 21px;
+}
+
+.copy {
+	font-style: italic;
+  font-size: 20px;
+}
+
+@media (min-width:768px) {
+  footer .contenedor {
+		justify-content: center;
+  }
+}
+
+@media (min-width:1024px) {
+  .contenedor {
+      width: 1000px;
+  }
+}

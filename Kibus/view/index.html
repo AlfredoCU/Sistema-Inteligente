@@ -1,0 +1,104 @@
+<!-- Inicio de nuestro archivo HTML -->
+<!DOCTYPE HTML>
+<html manifest="">
+<!-- Metadatos y links de diseño -->
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="El Mundo de Kibus, Práctica de Inteligencia Artificial">
+	<meta name="keywords" content="MundoKibus,IA">
+	<meta name="author" content="Alfredo CU">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+	<title> El Mundo de Kibus </title>
+	<link rel="stylesheet" href="/bootstrap-3.3.5-dist/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="shortcut icon" href="/Logo.ico">
+	<link href="/style.css" rel="stylesheet"/>
+</head>
+<!-- Cuerpo del archivo -->
+<body>
+	<!-- Encabezado -->
+	<header id="banner">
+		 <img src="Portada2.jpg" alt="Imagen de estudiantes">
+		 <div class="contenedor">
+			 <h2> El Mundo de Kibus </h2>
+			 <p> Inteligencia Artificial </p>
+		 </div>
+	</header>
+	<!-- Cuerpo principal del archivo -->
+	<main id="container">
+		<!-- Cargamos nuestro mapa y opciones de control -->
+		<section>
+			<canvas> Tu navegador no soporta canvas! </canvas>
+			<menu class="text">
+				<!-- Cargar mapa -->
+				<section id="cont" class="contmenu">
+					<div>
+						<label> Cargar Mapa: </label>
+						<select id="Phase" class="form-control">
+							<option value="1"> Fase 1 </option>
+							<option value="2"> Mapa Cargado </option> <!-- Fase 2 -->
+							<option value="3"> Fase 3 </option>
+						</select>
+					</div>
+					<!-- Ajustes de incio y destino -->
+					<div>
+						<label> Ajustes de incio y destino: </label>
+						<br/>
+						<div class="btn-group btn-xs btn-tools" data-toggle="buttons">
+							<label class="btn btn-primary">
+								<input type="radio" name="elem" value="kibus" id="option4" autocomplete="off" />
+								<img src="Ash.png" dragable>
+							</label>
+							<label class="btn btn-primary active">
+								<input type="radio" name="elem" value="house" id="option2" autocomplete="off" checked />
+								<img src="Bulbasaur.png"/>
+							</label>
+						</div>
+					</div>
+					<!-- Obstaculos -->
+					<div>
+						<label for="PercObs"> Obst&aacute;culos: </label>
+						<input id="PercObs" type="range"  min="0" max="80" value="0" step="5" class="form-control" />
+					</div>
+					<div>
+						<label for="Vel"> Velocidad: </label>
+						<input id="Vel" type="range"  min="0" max="100" value="0" step="1" class="form-control" />
+					</div>
+					<!-- Controles generales del sistema -->
+					<div>
+						<label> Controles: </label><br/>
+						<div class="btn-group">
+							<button type="button" id="btnHome"  class="btn btn-primary" >
+								<span class="glyphicon glyphicon-play"> </span>
+								<span class="t"> Iniciar </span>
+							</button>
+							<button type="button" id="btnPause"  class="btn btn-primary" >
+								<span class="glyphicon glyphicon-pause"> </span>
+								<span class="t"> Pausar </span>
+							</button>
+							<button type="button" id="btnReset" class="btn btn-primary">
+								<span class="glyphicon glyphicon-repeat"></span>
+								<span class="t"> Reiniciar </span>
+							</button>
+							<button type="button" id="btnObs" class="btn btn-primary">
+								<span class="glyphicon glyphicon-random"></span>
+								<span id="txtPercObs"> 0 % </span>
+							</button>
+						</div>
+					</div>
+				</section>
+			</menu>
+		</section>
+	</main>
+	<!-- Pie de página -->
+	<footer>
+		<div class="contenedor">
+			<p class="copy"> El Mundo de Kibus &copy; 2019</p>
+    </div>
+	</footer>
+	<!-- Código JS -->
+	<script src="/jquery-2.1.4.min.js"></script>
+	<script src="/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+	<script src="/kibus.js"></script>
+</body>
+</html>
