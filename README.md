@@ -1,1 +1,3 @@
-# Sistema-Inteligente
+# Sistema Inteligente.
+
+- Prototipo del Mundo de Kibus.
