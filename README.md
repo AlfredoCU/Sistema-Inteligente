@@ -1,3 +1,3 @@
 # Sistema Inteligente.
 
-- Programación de Algoritmo de Bresenham en "El mundo de Kibus".
+- Repositorio de Inteligencia Artificial I.
